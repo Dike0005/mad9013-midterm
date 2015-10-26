@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+/*****
+Responsive Website that changes based on it's dimensions of <35em (mobile), 35-60em and 60em> 
+*****/
+
+/***** Default *****/
+
+*{ 
+    
+    
+}
+
+html, body{
+    background-color:black;
+    
+}
+h1, h2, h3, p{
+    font-family: 'Droid Serif', serif;
+    margin: 10px;
+    
+}
+
+h2, h3{
+font-family:cursive;
+
+}
+
+img{
+   background: url(http://lorempixel.com/600/400/cats/);
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 30em;
+    
+}
+
+/***** Layout *****/
+
+header{
+    text-align: center;
+    background-color: #CC4410;
+
+}
+
+.wrapper{
+    width: 90%;
+    height: 100%;
+    margin:auto;
+    background-color: #7F2B0A;
+
+}
+.masthead{
+    
+}
+
+.mainnav{
+    text-decoration: none;
+}
+.mainnav ul { 
+    list-style: none;
+    float:left;
+    margin:0px;
+    padding: 0px;
+    width: 100%;
+    margin-top: -10px;
+}
+.mainnav li{
+    width: 100%; 
+    border: solid 1px black;
+    background-color:#7F4F3C; 
+    text-align:center;
+}
+.mainnav a{
+    text-decoration: none;
+    color:white;
+    font-size:1.5em;
+    display: block;
+}
+.mainnav a:hover{
+    background-color:orange;
+
+}
+.footer{
+	width: 100%;
+	background-color: #7F443C;
+	color: #CCC;
+	font-size: 0.5em;	
+    padding: 0.2rem 0 0.4rem 0;
+    
+}
+.footer p{
+}
+
+
+
+
+
+/* If the screen is stretched to 35em at least, this is what will occur */
+@media screen and (min-width: 35em){
+   
+    .mainnav li{
+    float:left;
+    width:25%;
+    border: none;
+    }
+
+    .mainnav a{
+    display: block;
+    font-size: 0.95em;
+    }
+    .footer{
+        margin-top: 150px;
+    }
+    
+    .footer p{
+        text-align: left;
+    }
+    
+    .primary{
+    float:left;
+    width: 67%;
+    font-size: 0.7em;
+    }
+    .side{
+    margin-left: 67%;
+    width:33%;
+    font-size: 0.65em;
+    }
+    
+
+}
+/* if the screen is stretched to 60em at least, this is what will occur */
+@media screen and (min-width: 60em){
+
+    .mainnav li{
+    float:none;
+    width: 20%;
+    border: solid 2px black;
+    }
+    
+    .mainnav ul{
+    margin-top: 20px;
+    }
+    
+    .primary{
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    width: 45%;
+    column-count: 2;
+    margin-left: 20%;
+    margin-bottom: 100px; 
+    position:absolute;
+    font-size: 0.8em;
+    padding-top: 2%
+    }
+   
+    .side{
+    width: 25%;
+    margin-left: 75%;
+    
+    }
+    
+    .footer{
+    margin-top: 50px; 
+    
+    }
+    
+}
